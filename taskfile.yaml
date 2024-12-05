@@ -1,23 +1,21 @@
 version: '3'
 
 tasks:
-  pip:
-    cmds:
-      - python3 -m venv venv
-      - pip install -r requirements.txt
-
-  lint:
-    cmds:
-      - prettier --write .
 
   venv:
     cmds:
-      - source venv/bin/activate
+      - rm -rf ./venv
+      - python3 -m venv venv
+      - source venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt
 
   export:
     cmds:
-      - pip freeze > requirements.txt
+      - source venv/bin/activate && pip freeze > requirements.txt
+
+  lint:
+    cmds:
+      - source venv/bin/activate && flake8 .
 
   dev:
     cmds:
-      - python cmd/main.py
+      - source venv/bin/activate && fastapi dev cmd/main.py
