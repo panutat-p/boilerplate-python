@@ -17,3 +17,9 @@ https://pandas.pydata.org/docs/getting_started/index.html
 ## Linter
 
 https://github.com/psf/black
+
+## Peewee
+
+https://github.com/coleifer/peewee
+
+https://docs.peewee-orm.com/en/latest
