@@ -13,3 +13,7 @@ https://fastapi.tiangolo.com/#installation
 ## Pandas
 
 https://pandas.pydata.org/docs/getting_started/index.html
+
+## Linter
+
+https://github.com/psf/black
